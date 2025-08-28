@@ -10,6 +10,10 @@ const meta: Meta<typeof BaseText> = {
       control: 'select',
       options: ['heading', 'subheading', 'body', 'caption'],
     },
+    size: {
+      control: 'select',
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+    },
     tag: {
       control: 'select',
       options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span'],
