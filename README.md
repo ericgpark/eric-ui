@@ -51,6 +51,31 @@ npm run build-storybook – Build static Storybook docs
 npm test
 Available props and variants are documented in Storybook.
 
+Apps must load their own fonts. For example, in a React app:
+```html
+<!-- index.html -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+```
+or for self-hosted fonts:
+```css
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+```
+
+You can override by replacing the global font variables in your CSS:
+
+```css
+:root {
+  --eric-ui-font-heading: 'Your Custom Heading Font', sans-serif;
+  --eric-ui-font-body: 'Your Custom Body Font', sans-serif;
+}
+```
+
 ---
 
 ## 📖 Documentation
