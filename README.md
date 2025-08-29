@@ -44,11 +44,23 @@ export default function App() {
 }
 ```
 
-npm run storybook – Launch Storybook for component exploration
-npm test – Run unit tests with Jest + React Testing Library
-npm run build – Build the library for npm publishing
-npm run build-storybook – Build static Storybook docs
+Launch Storybook for component exploration
+```bash
+npm run storybook
+```
+Run unit tests with Jest + React Testing Library
+```bash
 npm test
+```
+Build the library for npm publishing
+```bash
+npm run build
+```
+Build static Storybook docs
+```bash
+npm run build-storybook
+```
+
 Available props and variants are documented in Storybook.
 
 Apps must load their own fonts. For example, in a React app:
