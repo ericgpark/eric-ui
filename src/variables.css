@@ -16,4 +16,10 @@
   --text-color-400: #9CA3AF;
   --text-color-500: #D1D5DB;
   --text-color-600: #F3F4F6;
+
+  --text-size-100: 0.875rem;
+  --text-size-200: 1rem;
+  --text-size-300: 1.25rem;
+  --text-size-400: 1.5rem;
+  --text-size-500: 2rem;
 }
