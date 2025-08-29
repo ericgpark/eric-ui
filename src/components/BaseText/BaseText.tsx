@@ -4,7 +4,7 @@ type BaseTextType = 'heading' | 'subheading' | 'body' | 'caption';
 type BaseTextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 type BaseTextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 
-interface BaseTextProps {
+export interface BaseTextProps {
   type: BaseTextType;
   size?: BaseTextSize;
   tag?: BaseTextTag;
@@ -22,38 +22,38 @@ interface TextStyle {
 
 const typeStyles: Record<string, TextStyle> = {
   heading: {
-    fontSize: '2rem',
+    fontSize: 'var(--text-size-500)',
   },
   subheading: {
-    fontSize: '1.5rem',
+    fontSize: 'var(--text-size-400)',
   },
   body: {
-    fontSize: '1rem',
+    fontSize: 'var(--text-size-200)',
   },
   caption: {
-    fontSize: '0.875rem',
+    fontSize: 'var(--text-size-100)',
   },
 };
 
 const sizeStyles: Record<string, TextStyle> = {
   xs: {
-    fontSize: '0.875rem',
+    fontSize: 'var(--text-size-100)',
   },
   sm: {
-    fontSize: '1rem',
+    fontSize: 'var(--text-size-200)',
   },
   md: {
-    fontSize: '1.125rem',
+    fontSize: 'var(--text-size-300)',
   },
   lg: {
-    fontSize: '1.5rem',
+    fontSize: 'var(--text-size-400)',
   },
   xl: {
-    fontSize: '2rem',
+    fontSize: 'var(--text-size-500)',
   }
 };
 
-const BaseText = ({ type, size, tag = 'p', bold = false, italic = false, underline = false, highlight = false, children }: BaseTextProps) => {
+export const BaseText: React.FC<BaseTextProps> = ({ type, size, tag = 'p', bold = false, italic = false, underline = false, highlight = false, children }: BaseTextProps) => {
   const TextTag = tag;
 
   return (
@@ -75,5 +75,3 @@ const BaseText = ({ type, size, tag = 'p', bold = false, italic = false, underli
     </>
   );
 };
-
-export default BaseText as React.FC<BaseTextProps>;

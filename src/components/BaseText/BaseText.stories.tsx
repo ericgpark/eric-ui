@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import BaseText from './BaseText';
+import { BaseText, BaseTextProps } from './BaseText';
 
-const meta: Meta<typeof BaseText> = {
+const meta: Meta<BaseTextProps> = {
   title: 'Components/BaseText',
   component: BaseText,
   tags: ['autodocs'],
@@ -30,7 +30,7 @@ const meta: Meta<typeof BaseText> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof BaseText>;
+type Story = StoryObj<BaseTextProps>;
 
 export const Heading: Story = {
   args: {
