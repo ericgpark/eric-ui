@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react-vite';
+import { EricUIProvider } from '../src/EricUIProvider';
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +17,13 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+  decorators: [
+    (Story) => (
+      <EricUIProvider>
+        <Story />
+      </EricUIProvider>
+    )
+  ]
 };
 
 export default preview;
