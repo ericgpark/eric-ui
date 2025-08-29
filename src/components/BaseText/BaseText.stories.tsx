@@ -9,20 +9,23 @@ const meta: Meta<typeof BaseText> = {
     type: {
       control: 'select',
       options: ['heading', 'subheading', 'body', 'caption'],
+      description: 'The type of text to render.',
     },
     size: {
       control: 'select',
       options: ['xs', 'sm', 'md', 'lg', 'xl'],
+      description: 'The size of the text.',
     },
     tag: {
       control: 'select',
       options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span'],
+      description: 'The HTML tag to use for the text.',
     },
-    bold: { control: 'boolean' },
-    italic: { control: 'boolean' },
-    underline: { control: 'boolean' },
-    highlight: { control: 'boolean' },
-    children: { control: 'text' },
+    bold: { control: 'boolean', description: 'Whether to render the text in bold.' },
+    italic: { control: 'boolean', description: 'Whether to render the text in italic.' },
+    underline: { control: 'boolean', description: 'Whether to render the text with underline.' },
+    highlight: { control: 'boolean', description: 'Whether to highlight the text.' },
+    children: { control: 'text', description: 'The content of the text.' },
   },
 };
 
