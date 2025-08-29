@@ -1,23 +1,28 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { BaseButton, BaseButtonProps } from './BaseButton';
 
 const meta: Meta<BaseButtonProps> = {
   title: 'Components/BaseButton',
   component: BaseButton,
+  tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text' },
-    variant: { control: 'select', options: ['primary', 'secondary', 'tertiary'] },
+    children: { control: 'text', description: 'The copy of the button.' },
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'tertiary'],
+      description: 'The styling variant of the button.',
+    },
     size: {
       control: 'select',
       options: [
         'sm',
         'md',
         'lg'
-      ]
+      ],
+      description: 'The size of the button.',
     },
-    disabled: { control: 'boolean' },
-    onClick: { action: 'clicked' },
+    disabled: { control: 'boolean', description: 'Whether the button is disabled.' },
+    onClick: { action: 'clicked', description: 'Callback function to handle click events.' },
   },
 };
 
@@ -35,7 +40,7 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   args: {
-    children: 'Disabled',
+    children: 'Click Me',
     variant: 'primary',
     disabled: true,
   },
@@ -43,7 +48,7 @@ export const Disabled: Story = {
 
 export const Secondary: Story = {
   args: {
-    children: 'Secondary Button',
+    children: 'Click Me',
     variant: 'secondary',
     disabled: false,
   },
@@ -51,7 +56,7 @@ export const Secondary: Story = {
 
 export const Tertiary: Story = {
   args: {
-    children: 'Tertiary Button',
+    children: 'Click Me',
     variant: 'tertiary',
     disabled: false,
   },
@@ -59,7 +64,7 @@ export const Tertiary: Story = {
 
 export const Danger: Story = {
   args: {
-    children: 'Danger Button',
+    children: 'Click Me',
     variant: 'danger',
     disabled: false,
   },
