@@ -79,12 +79,17 @@ or for self-hosted fonts:
 }
 ```
 
-You can override by replacing the global font variables in your CSS:
+You can wrap your app in a custom style provider, or use the one provided
 
-```css
-:root {
-  --eric-ui-font-heading: 'Your Custom Heading Font', sans-serif;
-  --eric-ui-font-body: 'Your Custom Body Font', sans-serif;
+```tsx
+import { EricUIProvider } from 'eric-ui';
+
+export default function App() {
+  return (
+    <EricUIProvider>
+      <YourApp />
+    </EricUIProvider>
+  );
 }
 ```
 
