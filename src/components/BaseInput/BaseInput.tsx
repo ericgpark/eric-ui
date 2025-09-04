@@ -28,10 +28,6 @@ export const BaseInput: React.FC<BaseInputProps> = ({
 }: BaseInputProps) => {
   let inputElement: ReactElement;
 
-  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    handleChange(e.target.value);
-  };
-
   switch(type) {
     case 'select':
       inputElement = (
