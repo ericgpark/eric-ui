@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import './BaseInputStyles.css';
 
 type BaseInputType = 'text' | 'checkbox' | 'radio' | 'select';
 
@@ -9,6 +10,7 @@ type SelectOption = {
 
 export interface BaseInputProps {
   type: BaseInputType;
+  value: any;
   label?: string;
   prefill?: any;
   placeholder?: string;
@@ -19,6 +21,7 @@ export interface BaseInputProps {
 
 export const BaseInput: React.FC<BaseInputProps> = ({
   type = 'text',
+  value,
   label = '',
   prefill = '',
   placeholder = '',
@@ -33,7 +36,12 @@ export const BaseInput: React.FC<BaseInputProps> = ({
       inputElement = (
         <select onChange={(e) => handleChange(e.target.value)}>
           {options.map(({ name, value }: SelectOption) => (
-            <option value={value}>{name}</option>
+            <option
+              className="base-input__input"
+              value={value}
+            >
+              {name}
+            </option>
           ))}
         </select>
       );
@@ -41,6 +49,7 @@ export const BaseInput: React.FC<BaseInputProps> = ({
     case 'checkbox':
       inputElement = (
         <input
+          className="base-input__input"
           type="checkbox"
           checked={selected}
           onChange={(e) => handleChange(e.target.checked)}
@@ -50,6 +59,7 @@ export const BaseInput: React.FC<BaseInputProps> = ({
     case 'radio':
       inputElement = (
         <input
+          className="base-input__input"
           type="radio"
           checked={selected}
           onChange={(e) => handleChange(e.target.checked)}
@@ -60,9 +70,10 @@ export const BaseInput: React.FC<BaseInputProps> = ({
     default:
       inputElement = (
         <input
+          className="base-input__input"
           type={type}
           placeholder={placeholder}
-          value={prefill}
+          value={value}
           onChange={(e) => handleChange(e.target.value)}
         />
       );
@@ -70,15 +81,15 @@ export const BaseInput: React.FC<BaseInputProps> = ({
   }
 
   return (
-    <>
+    <div className="base-input">
       {
         label ?
-          <label>
+          <label className="base-input__label">
             {label}
             {inputElement}
           </label>
         : inputElement
       }
-    </>
+    </div>
   );
 };
