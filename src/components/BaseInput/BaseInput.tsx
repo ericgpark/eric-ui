@@ -10,9 +10,8 @@ type SelectOption = {
 
 export interface BaseInputProps {
   type: BaseInputType;
-  value: any;
+  value?: any;
   label?: string;
-  prefill?: any;
   placeholder?: string;
   selected?: boolean;
   options?: SelectOption[];
@@ -23,7 +22,6 @@ export const BaseInput: React.FC<BaseInputProps> = ({
   type = 'text',
   value,
   label = '',
-  prefill = '',
   placeholder = '',
   selected = false,
   options = [],
