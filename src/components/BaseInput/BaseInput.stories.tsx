@@ -12,9 +12,7 @@ const meta: Meta<typeof BaseInput> = {
       options: ['text', 'checkbox', 'radio', 'select'],
       description: 'Type of input element.'
     },
-    value: { control: 'text', description: 'Current value of the input.' },
     label: { control: 'text', description: 'Label for the input.' },
-    prefill: { control: 'text', description: 'Prefilled value for text input.' },
     placeholder: { control: 'text', description: 'Placeholder text for text input.' },
     selected: { control: 'boolean', description: 'Checked/selected state for checkbox/radio.' },
     options: { control: 'object', description: 'Options for select input.' },
@@ -29,7 +27,6 @@ export const Text: Story = {
   args: {
     type: 'text',
     label: 'Text Input',
-    prefill: '',
     placeholder: 'Enter text...',
     value: '',
     handleChange: () => {},
