@@ -26,7 +26,7 @@ export const Default: Story = {
 
 export const Large: Story = {
   args: {
-    name: 'star',
+    name: 'user',
     size: 48,
     color: '#007bff',
   },
@@ -34,7 +34,7 @@ export const Large: Story = {
 
 export const CustomColor: Story = {
   args: {
-    name: 'star',
+    name: 'close',
     size: 32,
     color: '#e91e63',
   },
