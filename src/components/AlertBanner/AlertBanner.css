@@ -1,0 +1,22 @@
+.alert-banner__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-300);
+  border-radius: 4px;
+  font-size: var(--text-size-200);
+}
+
+.alert-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.alert-banner__close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--text-color-300);
+}
