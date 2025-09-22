@@ -43,7 +43,7 @@ export const AlertBanner: React.FC<AlertBannerProps> = ({
       break;
   }
 
-  const iconName = type === 'info' ? 'info' : type === 'success' ? 'check_circle' : type === 'alert' ? 'question' : 'exclamation';
+  const iconName = type === 'info' ? 'info' : type === 'success' ? 'check' : type === 'alert' ? 'question' : 'exclamation';
 
   return (
     <div className="alert-banner" style={styles}>
