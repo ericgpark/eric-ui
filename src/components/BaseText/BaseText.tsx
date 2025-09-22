@@ -8,6 +8,7 @@ export interface BaseTextProps {
   type: BaseTextType;
   size?: BaseTextSize;
   tag?: BaseTextTag;
+  color?: string;
   bold?: boolean;
   italic?: boolean;
   underline?: boolean;
@@ -18,6 +19,7 @@ export interface BaseTextProps {
 interface TextStyle {
   fontSize: string;
   fontWeight?: string;
+  color?: string;
 }
 
 const typeStyles: Record<string, TextStyle> = {
@@ -53,7 +55,7 @@ const sizeStyles: Record<string, TextStyle> = {
   }
 };
 
-export const BaseText: React.FC<BaseTextProps> = ({ type, size, tag = 'p', bold = false, italic = false, underline = false, highlight = false, children }: BaseTextProps) => {
+export const BaseText: React.FC<BaseTextProps> = ({ type, size, tag = 'p', color = 'currentColor', bold = false, italic = false, underline = false, highlight = false, children }: BaseTextProps) => {
   const TextTag = tag;
 
   return (
@@ -64,6 +66,7 @@ export const BaseText: React.FC<BaseTextProps> = ({ type, size, tag = 'p', bold 
           margin: 0,
           fontWeight: bold ? 'bold' : undefined,
           fontStyle: italic ? 'italic' : undefined,
+          color,
           textDecoration: underline ? 'underline' : undefined,
           backgroundColor: highlight ? 'yellow' : undefined,
           ...typeStyles[type],
