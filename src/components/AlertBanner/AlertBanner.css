@@ -11,7 +11,7 @@
 .alert-banner__content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-200);
+  gap: var(--spacing-100);
 }
 
 .alert-banner__close {
