@@ -11,6 +11,11 @@
   --color-tertiary: #F3F4F6;
   --color-danger: #EF4444;
 
+  --color-info-light: #E0E7FF;
+  --color-success-light: #DCFCE7;
+  --color-alert-light: #FEF9C3;
+  --color-error-light: #FEE2E2;
+
   --text-color-100: #111827;
   --text-color-200: #374151;
   --text-color-300: #6B7280;
