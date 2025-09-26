@@ -21,7 +21,9 @@ export const BaseCard: React.FC<BaseCardProps> = ({ heading, subheading, footer,
       </div>
 
       <div className="base-card__footer">
-        {footer}
+        <BaseText type="caption">
+          {footer}
+        </BaseText>
       </div>
     </div>
   );
