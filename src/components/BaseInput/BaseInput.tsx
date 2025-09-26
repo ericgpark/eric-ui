@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { BaseText } from '../BaseText/BaseText';
-import './BaseInputStyles.css';
+import './BaseInput.css';
 
 type BaseInputType = 'text' | 'checkbox' | 'radio' | 'select';
 
