@@ -1,3 +1,5 @@
+import { BaseText } from "../BaseText/BaseText";
+
 export interface BaseButtonProps {
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
   size?: 'sm' | 'md' | 'lg';
@@ -77,7 +79,11 @@ export const BaseButton: React.FC<BaseButtonProps> = ({ variant = 'primary', siz
       disabled={disabled}
       onClick={onClick}
     >
-      {children}
+      <BaseText
+        type="body"
+      >
+        {children}
+      </BaseText>
     </button>
   );
 };
