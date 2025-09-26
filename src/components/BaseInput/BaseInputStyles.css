@@ -1,16 +1,26 @@
 .base-input {
 }
 
-.base-input__input {
+.base-input__select {
   padding: var(--spacing-100);
   border: 1px solid #ccc;
   border-radius: var(--spacing-100);
-  font-size: var(--text-size-200);
+}
+
+.base-input__text {
+  padding: var(--spacing-100);
+  border: 1px solid #ccc;
+  border-radius: var(--spacing-100);
 }
 
 .base-input__label {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-50);
-  font-family: var(--eric-ui-font-body, system-ui, sans-serif);
+  gap: var(--spacing-100);
+}
+
+.base-input__label-check {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-100);
 }

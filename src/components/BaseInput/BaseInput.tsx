@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { BaseText } from '../BaseText/BaseText';
 import './BaseInputStyles.css';
 
 type BaseInputType = 'text' | 'checkbox' | 'radio' | 'select';
@@ -32,13 +33,15 @@ export const BaseInput: React.FC<BaseInputProps> = ({
   switch(type) {
     case 'select':
       inputElement = (
-        <select onChange={(e) => handleChange(e.target.value)}>
+        <select className="base-input__select" onChange={(e) => handleChange(e.target.value)}>
           {options.map(({ name, value }: SelectOption) => (
             <option
-              className="base-input__input"
+              className="base-input__select-option"
               value={value}
             >
-              {name}
+              <BaseText type="body">
+                {name}
+              </BaseText>
             </option>
           ))}
         </select>
@@ -47,7 +50,7 @@ export const BaseInput: React.FC<BaseInputProps> = ({
     case 'checkbox':
       inputElement = (
         <input
-          className="base-input__input"
+          className="base-input__checkbox"
           type="checkbox"
           checked={selected}
           onChange={(e) => handleChange(e.target.checked)}
@@ -57,7 +60,7 @@ export const BaseInput: React.FC<BaseInputProps> = ({
     case 'radio':
       inputElement = (
         <input
-          className="base-input__input"
+          className="base-input__radio"
           type="radio"
           checked={selected}
           onChange={(e) => handleChange(e.target.checked)}
@@ -68,7 +71,7 @@ export const BaseInput: React.FC<BaseInputProps> = ({
     default:
       inputElement = (
         <input
-          className="base-input__input"
+          className="base-input__text"
           type={type}
           placeholder={placeholder}
           value={value}
@@ -82,8 +85,10 @@ export const BaseInput: React.FC<BaseInputProps> = ({
     <div className="base-input">
       {
         label ?
-          <label className="base-input__label">
-            {label}
+          <label className={`base-input__label${['radio', 'checkbox'].includes(type) ? '-check' : ''}`}>
+            <BaseText type="body">
+              {label}
+            </BaseText>
             {inputElement}
           </label>
         : inputElement
