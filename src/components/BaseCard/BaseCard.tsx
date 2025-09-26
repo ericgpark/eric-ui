@@ -1,5 +1,6 @@
 import React from 'react';
 import { BaseText } from '../BaseText/BaseText';
+import './BaseCard.css';
 
 export interface BaseCardProps {
   heading: string;
