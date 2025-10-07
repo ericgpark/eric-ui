@@ -1,20 +1,24 @@
 .toast {
   position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-400);
   padding: var(--spacing-300) var(--spacing-400);
+  border-radius: var(--spacing-300);
 }
 
-.toast__success {
+.toast-success {
   background-color: var(--color-success-light);
 }
 
-.toast__info {
+.toast-info {
   background-color: var(--color-info-light);
 }
 
-.toast__warning {
+.toast-warning {
   background-color: var(--color-alert-light);
 }
 
-.toast__error {
+.toast-error {
   background-color: var(--color-error-light);
 }
