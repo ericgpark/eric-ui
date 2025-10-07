@@ -19,7 +19,7 @@ export const Toast = ({ type, message, onClose }: ToastProps) => {
 
       {onClose && (
         <BaseButton
-          variant="tertiary"
+          variant="inline"
           onClick={onClose}
         >
           <BaseIcon name="close" />
