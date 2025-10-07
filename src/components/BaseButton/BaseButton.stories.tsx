@@ -9,7 +9,7 @@ const meta: Meta<BaseButtonProps> = {
     children: { control: 'text', description: 'The copy of the button.' },
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'tertiary'],
+      options: ['primary', 'secondary', 'tertiary', 'danger', 'inline'],
       description: 'The styling variant of the button.',
     },
     size: {
@@ -68,4 +68,12 @@ export const Danger: Story = {
     variant: 'danger',
     disabled: false,
   },
+};
+
+export const Inline: Story = {
+  args: {
+    children: 'Click Me',
+    variant: 'inline',
+    disabled: false,
+  }
 };
