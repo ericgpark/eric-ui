@@ -1,0 +1,20 @@
+.toast {
+  position: absolute;
+  padding: var(--spacing-300) var(--spacing-400);
+}
+
+.toast__success {
+  background-color: var(--color-success-light);
+}
+
+.toast__info {
+  background-color: var(--color-info-light);
+}
+
+.toast__warning {
+  background-color: var(--color-alert-light);
+}
+
+.toast__error {
+  background-color: var(--color-error-light);
+}
