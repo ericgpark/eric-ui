@@ -1,7 +1,7 @@
 import { BaseText } from "../BaseText/BaseText";
 
 export interface BaseButtonProps {
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger' | 'inline';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   onClick?: () => void;
@@ -53,6 +53,10 @@ export const BaseButton: React.FC<BaseButtonProps> = ({ variant = 'primary', siz
       styles.color = 'var(--text-color-600)';
       styles.fontWeight = 'bold';
       break;
+    case 'inline':
+      styles.backgroundColor = 'unset';
+      styles.color = 'var(--text-color-100)';
+      break;
   }
 
   switch(size) {
@@ -65,6 +69,10 @@ export const BaseButton: React.FC<BaseButtonProps> = ({ variant = 'primary', siz
     case 'lg':
       styles.padding = '12px 20px';
       break;
+  }
+
+  if (variant === 'inline') {
+    styles.padding = '0px';
   }
 
   if (disabled) {
