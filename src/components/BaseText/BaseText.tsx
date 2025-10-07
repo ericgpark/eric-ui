@@ -62,6 +62,9 @@ export const BaseText: React.FC<BaseTextProps> = ({ type, size, tag = 'p', color
     <>
       <TextTag
         style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
           fontFamily: defaultFonts[type ?? 'body'],
           margin: 0,
           fontWeight: bold ? 'bold' : undefined,
