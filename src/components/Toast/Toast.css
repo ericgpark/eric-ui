@@ -2,7 +2,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  gap: var(--spacing-400);
+  gap: var(--spacing-300);
   padding: var(--spacing-300) var(--spacing-400);
   border-radius: var(--spacing-300);
 }
