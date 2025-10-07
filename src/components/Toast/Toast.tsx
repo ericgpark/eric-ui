@@ -2,6 +2,7 @@ import React from 'react';
 import { BaseText } from '../BaseText/BaseText';
 import { BaseButton } from '../BaseButton/BaseButton';
 import BaseIcon from '../BaseIcon/BaseIcon';
+import './Toast.css';
 
 export interface ToastProps {
   type: 'success' | 'info' | 'warning' | 'error';
