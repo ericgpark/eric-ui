@@ -5,12 +5,12 @@ import BaseIcon from '../BaseIcon/BaseIcon';
 import './Toast.css';
 
 export interface ToastProps {
-  type: 'success' | 'info' | 'warning' | 'error';
+  type?: 'success' | 'info' | 'warning' | 'error';
   message: string;
   onClose?: () => void;
 }
 
-export const Toast = ({ type, message, onClose }: ToastProps) => {
+export const Toast = ({ type = 'info', message, onClose }: ToastProps) => {
   return (
     <div className={`toast toast-${type}`}>
       <BaseText type="body">
